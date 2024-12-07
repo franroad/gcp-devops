@@ -9,4 +9,8 @@ app= Flask(__name__)
 def hello_world():
     return render_template('index.html')
 
+# Jinja2 handles the logic for rendering the index.html template
+# Flask serves the CSS styles from the static folder
+
+
  
