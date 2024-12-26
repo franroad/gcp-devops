@@ -17,7 +17,9 @@ This project consists in the python app using flask and with a fancy  css layer.
 ### Local Testing ###
 
 1. Define the Docker image
-2. Build the image  <> 
+2. Build the image  `docker build --tag python-css-flask . `
+3. Run the local image `docker run -p local-port:container-port(5000 default-flask) image-name`
+4. Acces the container webpage ``http://127.0.0.1:<local-port>``
 # TO-DO:
  1. **Explain** the css stuff.
  2. **Explain** cloudbuild, gke , gcp , github interaction.
