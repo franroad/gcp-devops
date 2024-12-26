@@ -10,10 +10,10 @@ COPY requirements.txt requirements.txt
 # the image includes python but not the libraty or other dependencies
 RUN pip3 install  -r requirements.txt
 
-# Copy stuff into the container <source> <destination>, the working directory
+# Copy what ever is in the directory (local) into the container <source> <destination>, the working directory
 COPY . .
 
-#command python and argumetns for the command and flask
+#command python and argumetns for the container and flask
 CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
 
 
