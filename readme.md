@@ -29,7 +29,7 @@ This project consists in the python app using flask and with a fancy  css layer.
 **Process**
 1. Connect Github with Cloud Build using a *Cloud Build Trigger*.
 2. Create/Configure the *Cloud Build Trigger* based on  and event (could be a push to the branch) and trigger the Cloud Build Job.
- - 2.1
+  2.1 
 
 
 # TO-DO:
