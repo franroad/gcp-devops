@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: gcp-devops
+  name: gcp-devops-cloudbuild
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: cloudbuild
+  template:
+    metadata:
+      labels:
+        app: cloudbuild
+    spec:
+      containers:
+      - name: cloudbuild-container
+        image: europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0
+        ports:
+        - containerPort: 5000
+        env: 
+          - name: PORT
+            value: "5000"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: gcp-devops
+  name: cloudbuild-lb
+spec:
+  selector:
+    app: cloudbuild
+  ports: 
+    - port: 80
+      targetPort: 5000
+  type: LoadBalancer

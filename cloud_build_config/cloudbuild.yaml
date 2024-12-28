@@ -1,28 +1,21 @@
 steps:
 # Step 1: Build the Docker image with the specified version tag
-- name: 'build-the-image'
+- name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0', '../docker_image']
 
 # Step 2: Push the Docker image to Artifact Registry
-- name: 'push-the-image'
+- name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0']
 # Step 3: Deploy to GKE
-# Apply the combined Deployment and Service configuration
-- name: 'gcr.io/cloud-builders/kubectl'
-  args: ['apply', '-f', '../path/to/combined-deployment-service.yaml']
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=YOUR_COMPUTE_ZONE'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=YOUR_CLUSTER_NAME']
-
-images:
-- 'REGION-docker.pkg.dev/YOUR_PROJECT_ID/YOUR_REPO/YOUR_IMAGE_NAME'
+# deploy the CRD  and  configuration
+- name: 'gcr.io/cloud-builders/gke-deploy'
+  args:
+  - run
+  - --filename=kubernetes-resource-file
+  - --location=location
+  - --cluster=cluster
 
 
-steps:
-# Step 1: Build the Docker image with the specified version tag
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0', '../docker_image']
 
-# Step 2: Push the Docker image to Artifact Registry
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0']
+
+# deploy container image to GKE
