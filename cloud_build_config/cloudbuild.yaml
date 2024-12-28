@@ -1,0 +1,21 @@
+steps:
+# Step 1: Build the Docker image with the specified version tag
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0', '../docker_image']
+
+# Step 2: Push the Docker image to Artifact Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0']
+# Step 3: Deploy to GKE
+# deploy the CRD  and  configuration
+- name: 'gcr.io/cloud-builders/gke-deploy'
+  args:
+  - run
+  - --filename=../k8s_crd/deployment-service.yaml
+  - --location=europe-southwest1
+  - --cluster=backend-cluster
+
+
+
+
+# deploy container image to GKE
