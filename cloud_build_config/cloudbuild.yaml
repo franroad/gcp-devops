@@ -15,6 +15,9 @@ steps:
   - --filename=../k8s_crd/deployment-service.yaml
   - --location=europe-southwest1
   - --cluster=backend-cluster
+
+images:
+- 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0'
   
 options: 
-  logging: NONE
+  logging: CLOUD_LOGGING_ONLY
