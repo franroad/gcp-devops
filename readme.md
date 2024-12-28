@@ -46,4 +46,4 @@ This project consists in the python app using flask and with a fancy  css layer.
 
 5. Create a ns in Kubernetes where the deployment and the service will be created.
 6. Create a new branch that will contain the GKE deployment/service files that the trigger will detect when merging with the **main** branch or commit directly to the main branch.
-7. Create [*CRD*](https://github.com/franroad/gcp-devops/blob/gke-cloudbuild/k8s_crd/deployment-service.yaml) for the creating the Deployment and the service in K8's alongside the image via cloud build Job.
+7. Create [*CRD*](https://github.com/franroad/gcp-devops/blob/gke-cloudbuild/k8s_crd/deployment-service.yaml) to deploy the  application and  service in K8's along with building the image via cloud build Job.
