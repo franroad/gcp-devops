@@ -32,10 +32,14 @@ This project consists in the python app using flask and with a fancy  css layer.
 
 1. Connect Github with Cloud Build using a *Cloud Build Trigger*. (Installing the Cloud Build Plugin in the GitHub repo)
 2. Create/Configure the *Cloud Build Trigger*  based on  and event (could be a push to the branch) and trigger the Cloud Build Job.
-3. Specify where to find the *Cloud Build Configuration file* when creating the trigger.
-4.  Create a [*Cloud Build Configuration file*](https://github.com/franroad/gcp-devops/blob/main/cloud_build_config/cloudbuild.yaml) and save it in the repo. This file should be referenced in step (2)
-5. Create a new branch that will contain the GKE deployment/service files that the trigger will detect when merging with the **main** branch
-6. Create a ns in Kubernetes where the deployment and the service will be created
+[image]
+3. Create a [*Cloud Build Configuration file*](https://github.com/franroad/gcp-devops/blob/main/cloud_build_config/cloudbuild.yaml) and save it in the repo. This file should be referenced in step (2)
+4. Specify where to find the *Cloud Build Configuration file* when creating the trigger.
+5. Create a ns in Kubernetes where the deployment and the service will be created
+6. Create CRD for the creating the Deployment and the service in K8's alongside the image
+6. Create a [*Cloud Build Configuration file*](https://github.com/franroad/gcp-devops/blob/main/cloud_build_config/cloudbuild.yaml) and save it in the repo. This file build the image and push it to the artifact registry, additionally deploy the GKE infra should be referenced in step (2)
+7. Create a new branch that will contain the GKE deployment/service files that the trigger will detect when merging with the **main** branch or commit directly to the main branch.
+
 
 
 # TO-DO:
