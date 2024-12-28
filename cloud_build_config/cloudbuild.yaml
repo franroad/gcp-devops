@@ -1,7 +1,7 @@
 steps:
 # Step 1: Build the Docker image with the specified version tag
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0', '../docker_image']
+  args: ['build', '-t', 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0', './docker_image']
 
 # Step 2: Push the Docker image to Artifact Registry
 - name: 'gcr.io/cloud-builders/docker'
@@ -16,8 +16,8 @@ steps:
   - --location=europe-southwest1
   - --cluster=backend-cluster
 
-images:
-- 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0'
+# images:
+# - 'europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0'
   
 options: 
   logging: CLOUD_LOGGING_ONLY
