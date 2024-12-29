@@ -5,6 +5,21 @@
 - add the the key *ssh-add*
 - setup config in *.ssh* 
 
+## Project Description
+
+This project leverages Cloud Build and Github to create a CI/CD setup.
+
+With the current files and configurations the results obtained are the following:
+ - Web application using flask deployed in K8's using a Deployment
+ - k8's LB service for accessing the web-app
+ - CI/CD set up using Cloud Build and GitHub
+
+ ### **Note:** Aservice account is required when creating the trigger. This SA required the following permisisons:
+ - ``Cloud Build Service Account``
+ - ``Kubernetes Engine Developer``
+
+
+## Diagram
 
 # TO-DO:
  1. **Explain** the css stuff.
@@ -32,7 +47,9 @@ This project consists in the python app using flask and with a fancy  css layer.
 - ``GCP Cloud Build`` --> Used for bulding images and deploying it in k8's based on Github code .
 - ``GCP Artifact Registry`` --> Used for storing the created images in GCP
 
-### 2. Deploying into GKE ###
+### 2. Set-up Process ###
+
+The following steps describe in a summarized wayh how to link Cloud Build with Github and the files required for deploying and exposing the app in GKE.
 
 **Process**
 
