@@ -64,3 +64,10 @@ The following steps describe in a summarized wayh how to link Cloud Build with G
 5. Create a ns in Kubernetes where the deployment and the service will be created.
 6. Create a new branch that will contain the GKE deployment/service files that the trigger will detect when merging with the **main** branch or commit directly to the main branch.
 7. Create [*CRD*](https://github.com/franroad/gcp-devops/blob/gke-cloudbuild/k8s_crd/deployment-service.yaml) to deploy the  application and  service in K8's along with building the image via cloud build Job.
+
+
+## Conclusions
+
+- Cloud build Works seameslly with github and in a quick way.
+- Great Serverless solution.
+- Great interface for debugging the Job.
