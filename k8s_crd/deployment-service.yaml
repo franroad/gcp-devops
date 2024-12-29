@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: cloudbuild-container
-        image: europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops:1.0.0
+        image: europe-southwest1-docker.pkg.dev/afb-monitoring-test/gcp-devops/gcp-devops:1.0.0
         ports:
         - containerPort: 5000
         env: 
