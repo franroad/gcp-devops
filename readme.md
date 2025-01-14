@@ -9,7 +9,16 @@
 
 This project leverages Cloud Build and Github to create a CI/CD setup.
 
+The setup consist in configuring a trigger in Cloud Build that is configured to detect any push to the main of the repo.
+
+In the repo we have the following directories:
+
+- *Cloud_Build_config* contains the cloud build [file](https://github.com/franroad/gcp-devops/blob/main/cloud_build_config/cloudbuild.yaml) (used by cloud build for performing the steps)
+- *docker_image* contains the [configuration](https://github.com/franroad/gcp-devops/tree/main/docker_image) for building the image.
+- *k8s_crd* contains the [file](https://github.com/franroad/gcp-devops/tree/main/k8s_crd) for the deployment using the image and a LB service for exposing the app.
+
 With the current files and configurations the results obtained are the following:
+
  - Web application using flask deployed in K8's using a Deployment
  - k8's LB service for accessing the web-app
  - CI/CD set up using Cloud Build and GitHub
