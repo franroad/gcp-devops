@@ -11,7 +11,9 @@ This project leverages Cloud Build and Github to create a CI/CD setup.
 
 The setup consist in configuring a trigger in Cloud Build that is configured to detect any push to the main of the repo.
 
-In the repo we have the following directories:
+**Ideally** multiple triggers should be configured for various environments, including main, staging, and production branches. 
+This ensures that different branches corresponding to development, staging, and production environments can be handled separately
+### In the repo we have the following directories:
 
 - *Cloud_Build_config* contains the cloud build [file](https://github.com/franroad/gcp-devops/blob/main/cloud_build_config/cloudbuild.yaml) (used by cloud build for performing the steps)
 - *docker_image* contains the [configuration](https://github.com/franroad/gcp-devops/tree/main/docker_image) for building the image.
@@ -30,15 +32,12 @@ With the current files and configurations the results obtained are the following
 
 ## Diagram
 
-# TO-DO:
- 1. **Explain** the css stuff.
- 2. **Explain** cloudbuild, gke , gcp , github interaction.
- 3. **Create** The diagram.
+
 
 
 ## Docker Flask app ##
 
-This project consists in the python app using flask and with a fancy  css layer.
+The image used for CI/CD testing  consists a python app using flask and with some  css layer.
 
 - Web Application based on Pyhton with some css
 - Will be running in __GKE__
@@ -56,7 +55,7 @@ This project consists in the python app using flask and with a fancy  css layer.
 - ``GCP Cloud Build`` --> Used for bulding images and deploying it in k8's based on Github code .
 - ``GCP Artifact Registry`` --> Used for storing the created images in GCP
 
-### 2. Set-up Process ###
+## Set-up Process ##
 
 The following steps describe in a summarized wayh how to link Cloud Build with Github and the files required for deploying and exposing the app in GKE.
 
