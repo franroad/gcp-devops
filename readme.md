@@ -11,7 +11,7 @@ This project leverages Cloud Build and Github to create a CI/CD setup.
 
 The setup consist in configuring a trigger in Cloud Build that is configured to detect any push to the main of the repo.
 
-**Ideally** multiple triggers should be configured for various environments, including main, staging, and production branches. 
+#### Ideally multiple triggers should be configured for various environments, including main, staging, and production branches. 
 This ensures that different branches corresponding to development, staging, and production environments can be handled separately
 ### In the repo we have the following directories:
 
@@ -33,6 +33,7 @@ With the current files and configurations the results obtained are the following
 ## Diagram
 
 
+<img src="https://github.com/franroad/gcp-devops/blob/main/images/cloudbuild_github.drawio%20(1).png" alt="Alt text" title="Optional title">
 
 
 ## Docker Flask app ##
