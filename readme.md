@@ -10,17 +10,16 @@
 
 
 ## Table of Contents
-1. [Remember for repo SSH](#remember-for-repo-ssh)
-2. [Project Description](#project-description)
+1. [Project Description](#project-description)
    - [Technologies used](#technologies-used)
    - [Environments](#environments)
    - [Repo Directories](#repo-directories)
-3. [Diagram](#diagram)
-4. [Docker Flask App](#docker-flask-app)
+2. [Diagram](#diagram)
+3. [Docker Flask App](#docker-flask-app)
    - [1. Local Testing](#1-local-testing)
-5. [Tools for CI/CD](#tools-for-cicd)
-6. [Setup Process](#setup-process)
-7. [Conclusions](#conclusions)
+4. [Tools for CI/CD](#tools-for-cicd)
+5. [Setup Process](#setup-process)
+6. [Conclusions](#conclusions)
 
 ## Project Description
 
