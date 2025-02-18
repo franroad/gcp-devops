@@ -71,7 +71,7 @@ The image used for CI/CD testing  consists a python app using flask and with som
 3. Run the local image `docker run -p local-port:container-port(5000 default-flask) image-name`
 4. Acces the container webpage ``http://127.0.0.1:<local-port>``
 
-### Tools for CI/CD: Building and Deploying Docker Images from GitHub to GCP ###
+## Tools for CI/CD: Building and Deploying Docker Images from GitHub to GCP
 - ``GitHub`` --> Used for hosting code 
 - ``GCP Cloud Build`` --> Used for bulding images and deploying it in k8's based on Github code .
 - ``GCP Artifact Registry`` --> Used for storing the created images in GCP
