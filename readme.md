@@ -11,13 +11,9 @@
 
 ## Table of Contents
 1. [Project Description](#project-description)
-   - [Technologies used](#technologies-used)
-   - [Environments](#environments)
-   - [Repo Directories](#repo-directories)
 2. [Diagram](#diagram)
 3. [Docker Flask App](#docker-flask-app)
-   - [1. Local Testing](#1-local-testing)
-4. [Tools for CI/CD](#tools-for-cicd)
+4. [Tools for CI/CD](#Tools-for-CI/CD:-Building-and-Deploying-Docker-Images-from-GitHub-to-GCP)
 5. [Setup Process](#setup-process)
 6. [Conclusions](#conclusions)
 
