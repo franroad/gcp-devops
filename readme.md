@@ -13,9 +13,10 @@
 1. [Project Description](#project-description)
 2. [Diagram](#diagram)
 3. [Docker Flask App](#docker-flask-app)
-4. [Tools for CI/CD](#tools-for-ci/cd:-building-and-deploying-docker-images-from-gitHub-to-gcp)
+4. [Tools for CI/CD: Building and Deploying Docker Images from GitHub to GCP](#tools-for-cicd-building-and-deploying-docker-images-from-github-to-gcp)
 5. [Setup Process](#setup-process)
 6. [Conclusions](#conclusions)
+
 
 ## Project Description
 
