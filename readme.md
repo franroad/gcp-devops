@@ -1,15 +1,40 @@
 
+
+
+
 *Remember for repo ssh*
 - create the key with -c "your mail"
 - start the ssh service
 - add the the key *ssh-add*
 - setup config in *.ssh* 
 
+
+## Table of Contents
+1. [Remember for repo SSH](#remember-for-repo-ssh)
+2. [Project Description](#project-description)
+   - [Technologies used](#technologies-used)
+   - [Environments](#environments)
+   - [Repo Directories](#repo-directories)
+3. [Diagram](#diagram)
+4. [Docker Flask App](#docker-flask-app)
+   - [1. Local Testing](#1-local-testing)
+5. [Tools for CI/CD](#tools-for-cicd)
+6. [Setup Process](#setup-process)
+7. [Conclusions](#conclusions)
+
 ## Project Description
 
 This project leverages Cloud Build and Github to create a CI/CD setup.
 
 The setup consist in configuring a trigger in Cloud Build that is configured to detect any push to the main of the repo.
+
+**Technologies used**
+- Docker
+- CI/CD
+- GCP (GKE, Cloud Build)
+- Python (Flask)
+- CSS
+- Containerization
 
 #### Ideally multiple triggers should be configured for various environments, including main, staging, and production branches. 
 This ensures that different branches corresponding to development, staging, and production environments can be handled separately
