@@ -14,7 +14,7 @@
 2. [Diagram](#diagram)
 3. [Docker Flask App](#docker-flask-app)
 4. [Tools for CI/CD: Building and Deploying Docker Images from GitHub to GCP](#tools-for-cicd-building-and-deploying-docker-images-from-github-to-gcp)
-5. [Setup Process](#setup-process)
+5. [Setup Process](#set-up-process)
 6. [Conclusions](#conclusions)
 
 
